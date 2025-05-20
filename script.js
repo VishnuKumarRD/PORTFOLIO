@@ -33,9 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
     const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll("#navLinks a"); // All links inside nav
 
+    // Toggle menu on icon click
     menuIcon.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
+
+    // Hide menu on link click (for mobile)
+    navItems.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+        });
+    });
 });
+
 
