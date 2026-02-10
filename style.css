@@ -400,11 +400,13 @@ img {
 /* Skills & Projects & Certifications Cards (Grid Layout) */
 .card-grid {
     display: grid;
-    /* Use grid layout */
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
     /* Responsive columns with a minimum width */
     gap: 1.5rem;
     /* Gap between grid items */
+    align-items: stretch;
 }
 
 .card {
@@ -414,10 +416,30 @@ img {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    /* height:420px;
+    width:600px; */
+
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.container .card-grid .card button{
+    padding : 8px 14px;
+    
+    margin:auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border:ridge;
+    background-color: #9fddff;
+    cursor:pointer;
+
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0,15);
+
 }
 
 .project-img {
